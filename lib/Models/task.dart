@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Task {
-  String title;
-  DateTime date;
+  String titleFinal;
+  String dateFinal;
 
-  Task({required this.title, required this.date});
+  Task({required this.titleFinal, required this.dateFinal});
 }

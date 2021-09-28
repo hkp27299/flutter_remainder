@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'Screens/home_page.dart';
+import 'Models/notifier.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,7 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: ChangeNotifierProvider(
+        create: (context) => Notifier(),
+        child: const HomePage(),
+      ),
       theme: ThemeData(
           colorScheme: const ColorScheme.light(
               primary: Color.fromRGBO(149, 189, 220, 1),
